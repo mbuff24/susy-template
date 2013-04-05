@@ -1,0 +1,147 @@
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+@import "h5bp";
+@import "susy";
+
+// HTML5 BOILERPLATE INCLUDE
+@include h5bp-normalize;
+
+// --------------------------------------------
+// settings
+
+$total-columns    : 5;
+$column-width     : 4em;
+$gutter-width     : 1em;
+$grid-padding     : 1em;
+
+$medium-columns   : 8;
+$large-columns    : 12;
+
+$container-width  : container-outer-width($large-columns);
+
+// --------------------------------------------
+// layout
+
+@include border-box-sizing;
+
+.container {
+  @include container;
+  overflow: hidden;
+}
+
+// --------------------------------------------
+// Small Screens
+
+$anchor : 1;
+$side   : $total-columns - $anchor;
+
+.menu {
+  @include span-columns($side);
+  margin-left: -100%;
+}
+
+.main {
+
+}
+
+.omega {
+
+}
+
+
+// --------------------------------------------
+// Medium Screens
+
+$main : 5;
+$side : $medium-columns - $main;
+
+@include at-breakpoint($medium-columns) {
+
+  [href="#left"] { visibility: hidden; }
+
+  .menu {
+    width: columns($side);
+    margin-left: -100%;
+  }
+
+  .main {
+    @include span-columns($main);
+  }
+
+  .omega {
+    @include span-columns($side);
+    @include omega;
+  }
+
+}
+
+// --------------------------------------------
+// large
+
+$main : 8;
+$side : $large-columns - $main;
+
+@include at-breakpoint($large-columns) {
+
+  .menu {
+    @include span-columns($large-columns);
+    @include clearfix;
+    float: none;
+    display: block;
+    margin-left: 0;
+  }
+
+  .menu li {
+    float: left;
+    padding: .4em;
+    list-style: none;
+  }
+
+  .main {
+    @include span-columns($main);
+  }
+
+  .omega {
+    @include span-columns($side);
+    @include omega;
+  }
+
+}
+
+// --------------------------------------------
+// styles (for demo only)
+
+.container {
+  @include susy-grid-background;
+  @include at-breakpoint($medium-columns) { @include susy-grid-background; }
+  @include at-breakpoint($large-columns) { @include susy-grid-background; }
+}
+
+header, footer {
+  @include clearfix;
+  padding: 1em;
+  background: rgba(#fcf,.75);
+  text-align: center;
+}
+
+footer li {
+  list-style: none;
+}
+
+.content {
+  @include clearfix;
+}
+
+.menu, .main, .omega {
+  @include transition(.3s all ease);
+  padding: 1em;
+}
+
+.menu {
+  background: rgba(#cff,.75);
+}
+
+.main {
+  background: rgba(#eee,.75);
+}
