@@ -36,9 +36,19 @@ $container-width  : container-outer-width($large-columns);
 $anchor : 1;
 $side   : $total-columns - $anchor;
 
+.nav-open .menu {
+  margin-left: 0;
+}
+
+/*.nav-open .content {
+  @include pre($side);
+  overflow: hidden;
+}*/
+
 .menu {
   @include span-columns($side);
   margin-left: -100%;
+
 }
 
 .main {
@@ -49,6 +59,10 @@ $side   : $total-columns - $anchor;
 
 }
 
+.menu-button {
+    float: left;
+  }
+
 
 // --------------------------------------------
 // Medium Screens
@@ -58,7 +72,13 @@ $side : $medium-columns - $main;
 
 @include at-breakpoint($medium-columns) {
 
-  [href="#left"] { visibility: hidden; }
+  .nav-open .menu {
+    margin-left: 0;
+  }
+
+  /*.nav-open .content {
+    @include pre($side);
+  }*/
 
   .menu {
     width: columns($side);
@@ -107,6 +127,10 @@ $side : $large-columns - $main;
     @include omega;
   }
 
+  .menu-button {
+    display: none;
+  }
+
 }
 
 // --------------------------------------------
@@ -134,7 +158,7 @@ footer li {
 }
 
 .menu, .main, .omega {
-  @include transition(.3s all ease);
+  @include transition(.5s all ease);
   padding: 1em;
 }
 

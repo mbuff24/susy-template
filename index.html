@@ -10,12 +10,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
     </head>
     <body>
-        <section class="container">
-
+        <section id="container-js" class="container">
             <header>
-                <a href="#" class="toggle">MENU</a>
+                <a href="#" class="menu-button" id="toggle-menu-js">MENU</a>
                 Header Graphic Here
             </header>
 
@@ -58,5 +59,11 @@
             </footer>
 
         </section>
+
+        <script>
+            $('#toggle-menu-js').click(function() {
+                $('#container-js').toggleClass('nav-open');
+            });
+        </script>
     </body>
 </html>

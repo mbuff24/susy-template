@@ -310,6 +310,14 @@ table {
   clear: both;
 }
 
+.nav-open .menu {
+  margin-left: 0;
+}
+
+/*.nav-open .content {
+  @include pre($side);
+  overflow: hidden;
+}*/
 .menu {
   width: 79.16667%;
   float: left;
@@ -318,11 +326,18 @@ table {
   margin-left: -100%;
 }
 
+.menu-button {
+  float: left;
+}
+
 @media (min-width: 41em) {
-  [href="#left"] {
-    visibility: hidden;
+  .nav-open .menu {
+    margin-left: 0;
   }
 
+  /*.nav-open .content {
+    @include pre($side);
+  }*/
   .menu {
     width: 35.89744%;
     margin-left: -100%;
@@ -371,6 +386,10 @@ table {
     margin-right: 1.69492%;
     float: right;
     margin-right: 0;
+  }
+
+  .menu-button {
+    display: none;
   }
 }
 .container {
@@ -444,10 +463,10 @@ footer li {
 }
 
 .menu, .main, .omega {
-  -webkit-transition: 0.3s all ease;
-  -moz-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-  transition: 0.3s all ease;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
   padding: 1em;
 }
 
