@@ -7,6 +7,16 @@
 // HTML5 BOILERPLATE INCLUDE
 @include h5bp-normalize;
 
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
 // --------------------------------------------
 // settings
 
@@ -18,6 +28,7 @@ $grid-padding     : 1em;
 $medium-columns   : 8;
 $large-columns    : 12;
 
+$container-style  : magic;
 $container-width  : container-outer-width($large-columns);
 
 // --------------------------------------------
@@ -40,28 +51,26 @@ $side   : $total-columns - $anchor;
   margin-left: 0;
 }
 
-/*.nav-open .content {
-  @include pre($side);
+.nav-open .content {
+  //@include reset-columns;
+  @include span-columns($total-columns);
   overflow: hidden;
-}*/
+  margin-right: - space($side);
+}
 
 .menu {
   @include span-columns($side);
   margin-left: -100%;
-
 }
 
-.main {
+.main { }
+.omega { }
 
-}
-
-.omega {
-
-}
+header, footer { width: columns($total-columns); }
 
 .menu-button {
-    float: left;
-  }
+  float: left;
+}
 
 
 // --------------------------------------------
@@ -76,36 +85,8 @@ $side : $medium-columns - $main;
     margin-left: 0;
   }
 
-  /*.nav-open .content {
-    @include pre($side);
-  }*/
-
   .menu {
-    width: columns($side);
-    margin-left: -100%;
-  }
-
-  .main {
-    @include span-columns($main);
-  }
-
-  .omega {
-    @include span-columns($side);
-    @include omega;
-  }
-
-}
-
-// --------------------------------------------
-// large
-
-$main : 8;
-$side : $large-columns - $main;
-
-@include at-breakpoint($large-columns) {
-
-  .menu {
-    @include span-columns($large-columns);
+    @include span-columns($medium-columns);
     @include clearfix;
     float: none;
     display: block;
@@ -130,6 +111,33 @@ $side : $large-columns - $main;
   .menu-button {
     display: none;
   }
+
+  header, footer { width: columns($medium-columns); }
+
+}
+
+// --------------------------------------------
+// large
+
+$main : 8;
+$side : $large-columns - $main;
+
+@include at-breakpoint($large-columns) {
+
+  .menu {
+    @include span-columns($large-columns);
+  }
+
+  .main {
+    @include span-columns($main);
+  }
+
+  .omega {
+    @include span-columns($side);
+    @include omega;
+  }
+
+  header, footer { width: columns($large-columns); }
 
 }
 
@@ -157,7 +165,7 @@ footer li {
   @include clearfix;
 }
 
-.menu, .main, .omega {
+.menu, .content, .main, .omega {
   @include transition(.5s all ease);
   padding: 1em;
 }
