@@ -1,21 +1,11 @@
 @import "compass";
 @import "compass/css3";
 @import "compass/utilities";
-@import "h5bp";
 @import "susy";
 
 // HTML5 BOILERPLATE INCLUDE
-@include h5bp-normalize;
-
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
+@import "m5bp";
+@import "normalize";
 
 // --------------------------------------------
 // settings
@@ -25,7 +15,7 @@ $column-width     : 4em;
 $gutter-width     : 1em;
 $grid-padding     : 1em;
 
-$medium-columns   : 8;
+$medium-columns   : 9;
 $large-columns    : 12;
 
 $container-style  : magic;
@@ -74,7 +64,7 @@ $side   : $total-columns - $anchor;
 // --------------------------------------------
 // Medium Screens
 
-$main : 5;
+$main : 6;
 $side : $medium-columns - $main;
 
 @include at-breakpoint($medium-columns) {
