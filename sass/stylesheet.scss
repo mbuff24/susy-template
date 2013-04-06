@@ -10,11 +10,11 @@
 // --------------------------------------------
 // settings
 
-$total-columns    : 5;
 $column-width     : 4em;
-$gutter-width     : 1em;
-$grid-padding     : 1em;
+$gutter-width     : 0.5em;
+$grid-padding     : 0em;
 
+$total-columns    : 7;
 $medium-columns   : 9;
 $large-columns    : 12;
 
@@ -34,7 +34,7 @@ $container-width  : container-outer-width($large-columns);
 // --------------------------------------------
 // Small Screens
 
-$anchor : 1;
+$anchor : 2;
 $side   : $total-columns - $anchor;
 
 .nav-open .menu {
@@ -46,11 +46,13 @@ $side   : $total-columns - $anchor;
 }
 
 .content {
-  @include span-columns($total-columns);
+  width: columns($total-columns);
+  float: left;
 }
 
 .menu {
-  @include span-columns($side);
+  width: columns($side);
+  float: left;
   margin-left: -100%;
 }
 
@@ -70,9 +72,8 @@ $side : $medium-columns - $main;
 @include at-breakpoint($medium-columns) {
 
   .menu {
-    @include span-columns($medium-columns);
     @include clearfix;
-    float: none;
+    width: columns($medium-columns);
     display: block;
     margin-left: 0;
   }
@@ -109,7 +110,7 @@ $side : $large-columns - $main;
 @include at-breakpoint($large-columns) {
 
   .menu {
-    @include span-columns($large-columns);
+    width: columns($large-columns);
   }
 
   .main {
