@@ -32,7 +32,7 @@ $container-width  : container-outer-width($large-columns);
 }
 
 // --------------------------------------------
-// Small Screens
+// Small Screens & base styles
 
 $anchor : 2;
 $side   : $total-columns - $anchor;
@@ -62,6 +62,44 @@ $side   : $total-columns - $anchor;
   float: left;
 }
 
+.header, .footer {
+  @include clearfix;
+  padding: 1em;
+  background: rgba(#fcf,.75);
+  text-align: center;
+}
+
+.footer ul {
+  margin-left: 0;
+}
+
+.footer li {
+  list-style: none;
+}
+
+.content {
+  @include clearfix;
+  overflow: hidden;
+  width: 100%;
+}
+
+.menu, .content, .main, .omega {
+  @include transition(.5s all linear);
+}
+
+.menu {
+  background: rgba(#cff,.75);
+  margin-right: 0;
+}
+
+.main {
+  background: rgba(#eee,.75);
+  padding: .5em;
+}
+
+.omega {
+  padding: .5em;
+}
 
 // --------------------------------------------
 // Medium Screens
@@ -133,43 +171,4 @@ $side : $large-columns - $main;
   @include susy-grid-background;
   @include at-breakpoint($medium-columns) { @include susy-grid-background; }
   @include at-breakpoint($large-columns) { @include susy-grid-background; }
-}
-
-.header, .footer {
-  @include clearfix;
-  padding: 1em;
-  background: rgba(#fcf,.75);
-  text-align: center;
-}
-
-.footer ul {
-  margin-left: 0;
-}
-
-.footer li {
-  list-style: none;
-}
-
-.content {
-  @include clearfix;
-  overflow: hidden;
-  width: 100%;
-}
-
-.menu, .content, .main, .omega {
-  @include transition(.5s all linear);
-}
-
-.menu {
-  background: rgba(#cff,.75);
-  margin-right: 0;
-}
-
-.main {
-  background: rgba(#eee,.75);
-  padding: .5em;
-}
-
-.omega {
-  padding: .5em;
 }

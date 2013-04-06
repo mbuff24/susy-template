@@ -1,730 +1,219 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-html,
-button,
-input,
-select,
-textarea {
-  color: #222;
-}
+/* HTML5 Boilerplate  What follows is the result of much research on cross-browser styling. Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
+/* ========================================================================== Base styles: opinionated defaults ========================================================================== */
+html, button, input, select, textarea { color: #222; }
 
-body {
-  font-size: 1em;
-  line-height: 1.4;
-}
+body { font-size: 1em; line-height: 1.4; }
 
-a {
-  color: #00e;
-}
+a { color: #00e; }
 
-a:visited {
-  color: #551a8b;
-}
+a:visited { color: #551a8b; }
 
-a:hover {
-  color: #06e;
-}
+a:hover { color: #06e; }
 
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-img {
-  vertical-align: middle;
-}
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img { vertical-align: middle; }
 
-/*
- * Remove default fieldset styles.
- */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
+/* Remove default fieldset styles. */
+fieldset { border: 0; margin: 0; padding: 0; }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-textarea {
-  resize: vertical;
-}
+/* Allow only vertical resizing of textareas. */
+textarea { resize: vertical; }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+/* ========================================================================== Helper classes ========================================================================== */
 /* Prevent callout */
-.nocallout {
-  -webkit-touch-callout: none;
-}
+.nocallout { -webkit-touch-callout: none; }
 
-.pressed {
-  background-color: rgba(0, 0, 0, 0.7);
-}
+.pressed { background-color: rgba(0, 0, 0, 0.7); }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
-textarea[contenteditable] {
-  -webkit-appearance: none;
-}
+textarea[contenteditable] { -webkit-appearance: none; }
 
-/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
-   they have been set as display: none */
-.gifhidden {
-  position: absolute;
-  left: -100%;
-}
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if they have been set as display: none */
+.gifhidden { position: absolute; left: -100%; }
 
-/*
- * Image replacement
- */
-.ir {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: 0;
-  direction: ltr;
-  display: block;
-  overflow: hidden;
-  text-align: left;
-  text-indent: -999em;
-}
+/* Image replacement */
+.ir { background-color: transparent; background-repeat: no-repeat; border: 0; direction: ltr; display: block; overflow: hidden; text-align: left; text-indent: -999em; }
 
-.ir br {
-  display: none;
-}
+.ir br { display: none; }
 
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
 
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-.invisible {
-  visibility: hidden;
-}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
 
-/**
- * Clearfix helper
- * Used to contain floats: h5bp.com/q
- */
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
+/** Clearfix helper Used to contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
 
-.clearfix:after {
-  clear: both;
-}
+.clearfix:after { clear: both; }
 
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
 
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
 
-/**
- * Address styling not present in IE 8/9.
- */
-[hidden] {
-  display: none;
-}
+/** Address styling not present in IE 8/9. */
+[hidden] { display: none; }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-}
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ }
 
-/**
- * Remove default margin.
- */
-body {
-  margin: 0;
-}
+/** Remove default margin. */
+body { margin: 0; }
 
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-a:focus {
-  outline: thin dotted;
-}
+/* ========================================================================== Links ========================================================================== */
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
 
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
-  outline: 0;
-}
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
 
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
 
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-b,
-strong {
-  font-weight: bold;
-}
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
 
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-dfn {
-  font-style: italic;
-}
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
 
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
 
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000;
-}
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
 
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
 
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-pre {
-  white-space: pre-wrap;
-}
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
 
-/**
- * Set consistent quote types.
- */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 
-sup {
-  top: -0.5em;
-}
+sup { top: -0.5em; }
 
-sub {
-  bottom: -0.25em;
-}
+sub { bottom: -0.25em; }
 
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-img {
-  border: 0;
-}
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
 
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-svg:not(:root) {
-  overflow: hidden;
-}
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
 
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-figure {
-  margin: 0;
-}
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
 
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
 
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
 
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-button,
-input {
-  line-height: normal;
-}
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
 
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-button,
-select {
-  text-transform: none;
-}
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
 
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
 
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
 
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
 
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
 
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
-}
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.container {
-  *zoom: 1;
-  max-width: 53.5em;
-  _width: 53.5em;
-  padding-left: 0em;
-  padding-right: 0em;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.container { *zoom: 1; max-width: 53.5em; _width: 53.5em; padding-left: 0em; padding-right: 0em; margin-left: auto; margin-right: auto; overflow: hidden; }
+.container:after { content: ""; display: table; clear: both; }
 
-.nav-open .menu {
-  margin-left: 0;
-}
+.nav-open .menu { margin-left: 0; }
 
-.nav-open .content {
-  margin-right: -72.58065%;
-}
+.nav-open .content { margin-right: -72.58065%; }
 
-.content {
-  width: 100%;
-  float: left;
-}
+.content { width: 100%; float: left; }
 
-.menu {
-  width: 70.96774%;
-  float: left;
-  margin-left: -100%;
-}
+.menu { width: 70.96774%; float: left; margin-left: -100%; }
 
-.header, .footer {
-  width: 100%;
-}
+.header, .footer { width: 100%; }
 
-.menu-button {
-  float: left;
-}
+.menu-button { float: left; }
 
-@media (min-width: 40em) {
-  .menu {
-    overflow: hidden;
-    width: 100%;
-    display: block;
-    margin-left: 0;
-  }
+.header, .footer { overflow: hidden; *zoom: 1; padding: 1em; background: rgba(255, 204, 255, 0.75); text-align: center; }
 
-  .menu li {
-    float: left;
-    padding: .4em;
-    list-style: none;
-  }
+.footer ul { margin-left: 0; }
 
-  .main {
-    width: 66.25%;
-    float: left;
-    margin-right: 1.25%;
-  }
+.footer li { list-style: none; }
 
-  .omega {
-    width: 32.5%;
-    float: left;
-    margin-right: 1.25%;
-    float: right;
-    margin-right: 0;
-  }
+.content { overflow: hidden; *zoom: 1; overflow: hidden; width: 100%; }
 
-  .menu-button {
-    display: none;
-  }
+.menu, .content, .main, .omega { -webkit-transition: 0.5s all linear; -moz-transition: 0.5s all linear; -o-transition: 0.5s all linear; transition: 0.5s all linear; }
 
-  .header, .footer {
-    width: 100%;
-  }
-}
-@media (min-width: 53.5em) {
-  .menu {
-    width: 100%;
-  }
+.menu { background: rgba(204, 255, 255, 0.75); margin-right: 0; }
 
-  .main {
-    width: 66.35514%;
-    float: left;
-    margin-right: 0.93458%;
-  }
+.main { background: rgba(238, 238, 238, 0.75); padding: .5em; }
 
-  .omega {
-    width: 32.71028%;
-    float: left;
-    margin-right: 0.93458%;
-    float: right;
-    margin-right: 0;
-  }
+.omega { padding: .5em; }
 
-  .header, .footer {
-    width: 100%;
-  }
-}
-.container {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(12.90323%, rgba(100, 100, 225, 0.25)), color-stop(12.90323%, rgba(0, 0, 0, 0)), color-stop(14.51613%, rgba(0, 0, 0, 0)), color-stop(14.51613%, rgba(100, 100, 225, 0.25)), color-stop(27.41935%, rgba(100, 100, 225, 0.25)), color-stop(27.41935%, rgba(0, 0, 0, 0)), color-stop(29.03226%, rgba(0, 0, 0, 0)), color-stop(29.03226%, rgba(100, 100, 225, 0.25)), color-stop(41.93548%, rgba(100, 100, 225, 0.25)), color-stop(41.93548%, rgba(0, 0, 0, 0)), color-stop(43.54839%, rgba(0, 0, 0, 0)), color-stop(43.54839%, rgba(100, 100, 225, 0.25)), color-stop(56.45161%, rgba(100, 100, 225, 0.25)), color-stop(56.45161%, rgba(0, 0, 0, 0)), color-stop(58.06452%, rgba(0, 0, 0, 0)), color-stop(58.06452%, rgba(100, 100, 225, 0.25)), color-stop(70.96774%, rgba(100, 100, 225, 0.25)), color-stop(70.96774%, rgba(0, 0, 0, 0)), color-stop(72.58065%, rgba(0, 0, 0, 0)), color-stop(72.58065%, rgba(100, 100, 225, 0.25)), color-stop(85.48387%, rgba(100, 100, 225, 0.25)), color-stop(85.48387%, rgba(0, 0, 0, 0)), color-stop(87.09677%, rgba(0, 0, 0, 0)), color-stop(87.09677%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-position: left top;
-  -webkit-background-origin: content;
-  -moz-background-origin: content;
-  -ms-background-origin: content-box;
-  -o-background-origin: content-box;
-  background-origin: content-box;
-  -webkit-background-clip: content-box;
-  -moz-background-clip: content-box;
-  background-clip: content-box;
-}
-@media (min-width: 40em) {
-  .container {
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(10%, rgba(100, 100, 225, 0.25)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(11.25%, rgba(0, 0, 0, 0)), color-stop(11.25%, rgba(100, 100, 225, 0.25)), color-stop(21.25%, rgba(100, 100, 225, 0.25)), color-stop(21.25%, rgba(0, 0, 0, 0)), color-stop(22.5%, rgba(0, 0, 0, 0)), color-stop(22.5%, rgba(100, 100, 225, 0.25)), color-stop(32.5%, rgba(100, 100, 225, 0.25)), color-stop(32.5%, rgba(0, 0, 0, 0)), color-stop(33.75%, rgba(0, 0, 0, 0)), color-stop(33.75%, rgba(100, 100, 225, 0.25)), color-stop(43.75%, rgba(100, 100, 225, 0.25)), color-stop(43.75%, rgba(0, 0, 0, 0)), color-stop(45%, rgba(0, 0, 0, 0)), color-stop(45%, rgba(100, 100, 225, 0.25)), color-stop(55%, rgba(100, 100, 225, 0.25)), color-stop(55%, rgba(0, 0, 0, 0)), color-stop(56.25%, rgba(0, 0, 0, 0)), color-stop(56.25%, rgba(100, 100, 225, 0.25)), color-stop(66.25%, rgba(100, 100, 225, 0.25)), color-stop(66.25%, rgba(0, 0, 0, 0)), color-stop(67.5%, rgba(0, 0, 0, 0)), color-stop(67.5%, rgba(100, 100, 225, 0.25)), color-stop(77.5%, rgba(100, 100, 225, 0.25)), color-stop(77.5%, rgba(0, 0, 0, 0)), color-stop(78.75%, rgba(0, 0, 0, 0)), color-stop(78.75%, rgba(100, 100, 225, 0.25)), color-stop(88.75%, rgba(100, 100, 225, 0.25)), color-stop(88.75%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-position: left top;
-    -webkit-background-origin: content;
-    -moz-background-origin: content;
-    -ms-background-origin: content-box;
-    -o-background-origin: content-box;
-    background-origin: content-box;
-    -webkit-background-clip: content-box;
-    -moz-background-clip: content-box;
-    background-clip: content-box;
-  }
-}
-@media (min-width: 53.5em) {
-  .container {
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(7.47664%, rgba(100, 100, 225, 0.25)), color-stop(7.47664%, rgba(0, 0, 0, 0)), color-stop(8.41121%, rgba(0, 0, 0, 0)), color-stop(8.41121%, rgba(100, 100, 225, 0.25)), color-stop(15.88785%, rgba(100, 100, 225, 0.25)), color-stop(15.88785%, rgba(0, 0, 0, 0)), color-stop(16.82243%, rgba(0, 0, 0, 0)), color-stop(16.82243%, rgba(100, 100, 225, 0.25)), color-stop(24.29907%, rgba(100, 100, 225, 0.25)), color-stop(24.29907%, rgba(0, 0, 0, 0)), color-stop(25.23364%, rgba(0, 0, 0, 0)), color-stop(25.23364%, rgba(100, 100, 225, 0.25)), color-stop(32.71028%, rgba(100, 100, 225, 0.25)), color-stop(32.71028%, rgba(0, 0, 0, 0)), color-stop(33.64486%, rgba(0, 0, 0, 0)), color-stop(33.64486%, rgba(100, 100, 225, 0.25)), color-stop(41.1215%, rgba(100, 100, 225, 0.25)), color-stop(41.1215%, rgba(0, 0, 0, 0)), color-stop(42.05607%, rgba(0, 0, 0, 0)), color-stop(42.05607%, rgba(100, 100, 225, 0.25)), color-stop(49.53271%, rgba(100, 100, 225, 0.25)), color-stop(49.53271%, rgba(0, 0, 0, 0)), color-stop(50.46729%, rgba(0, 0, 0, 0)), color-stop(50.46729%, rgba(100, 100, 225, 0.25)), color-stop(57.94393%, rgba(100, 100, 225, 0.25)), color-stop(57.94393%, rgba(0, 0, 0, 0)), color-stop(58.8785%, rgba(0, 0, 0, 0)), color-stop(58.8785%, rgba(100, 100, 225, 0.25)), color-stop(66.35514%, rgba(100, 100, 225, 0.25)), color-stop(66.35514%, rgba(0, 0, 0, 0)), color-stop(67.28972%, rgba(0, 0, 0, 0)), color-stop(67.28972%, rgba(100, 100, 225, 0.25)), color-stop(74.76636%, rgba(100, 100, 225, 0.25)), color-stop(74.76636%, rgba(0, 0, 0, 0)), color-stop(75.70093%, rgba(0, 0, 0, 0)), color-stop(75.70093%, rgba(100, 100, 225, 0.25)), color-stop(83.17757%, rgba(100, 100, 225, 0.25)), color-stop(83.17757%, rgba(0, 0, 0, 0)), color-stop(84.11215%, rgba(0, 0, 0, 0)), color-stop(84.11215%, rgba(100, 100, 225, 0.25)), color-stop(91.58879%, rgba(100, 100, 225, 0.25)), color-stop(91.58879%, rgba(0, 0, 0, 0)), color-stop(92.52336%, rgba(0, 0, 0, 0)), color-stop(92.52336%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-    background-position: left top;
-    -webkit-background-origin: content;
-    -moz-background-origin: content;
-    -ms-background-origin: content-box;
-    -o-background-origin: content-box;
-    background-origin: content-box;
-    -webkit-background-clip: content-box;
-    -moz-background-clip: content-box;
-    background-clip: content-box;
-  }
-}
-
-.header, .footer {
-  overflow: hidden;
-  *zoom: 1;
-  padding: 1em;
-  background: rgba(255, 204, 255, 0.75);
-  text-align: center;
-}
-
-.footer ul {
-  margin-left: 0;
-}
-
-.footer li {
-  list-style: none;
-}
-
-.content {
-  overflow: hidden;
-  *zoom: 1;
-  overflow: hidden;
-  width: 100%;
-}
-
-.menu, .content, .main, .omega {
-  -webkit-transition: 0.5s all linear;
-  -moz-transition: 0.5s all linear;
-  -o-transition: 0.5s all linear;
-  transition: 0.5s all linear;
-}
-
-.menu {
-  background: rgba(204, 255, 255, 0.75);
-  margin-right: 0;
-}
-
-.main {
-  background: rgba(238, 238, 238, 0.75);
-  padding: .5em;
-}
-
-.omega {
-  padding: .5em;
-}
+@media (min-width: 40em) { .menu { overflow: hidden; width: 100%; display: block; margin-left: 0; }
+  .menu li { float: left; padding: .4em; list-style: none; }
+  .main { width: 66.25%; float: left; margin-right: 1.25%; }
+  .omega { width: 32.5%; float: left; margin-right: 1.25%; float: right; margin-right: 0; }
+  .menu-button { display: none; }
+  .header, .footer { width: 100%; } }
+@media (min-width: 53.5em) { .menu { width: 100%; }
+  .main { width: 66.35514%; float: left; margin-right: 0.93458%; }
+  .omega { width: 32.71028%; float: left; margin-right: 0.93458%; float: right; margin-right: 0; }
+  .header, .footer { width: 100%; } }
+.container { background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(12.90323%, rgba(100, 100, 225, 0.25)), color-stop(12.90323%, rgba(0, 0, 0, 0)), color-stop(14.51613%, rgba(0, 0, 0, 0)), color-stop(14.51613%, rgba(100, 100, 225, 0.25)), color-stop(27.41935%, rgba(100, 100, 225, 0.25)), color-stop(27.41935%, rgba(0, 0, 0, 0)), color-stop(29.03226%, rgba(0, 0, 0, 0)), color-stop(29.03226%, rgba(100, 100, 225, 0.25)), color-stop(41.93548%, rgba(100, 100, 225, 0.25)), color-stop(41.93548%, rgba(0, 0, 0, 0)), color-stop(43.54839%, rgba(0, 0, 0, 0)), color-stop(43.54839%, rgba(100, 100, 225, 0.25)), color-stop(56.45161%, rgba(100, 100, 225, 0.25)), color-stop(56.45161%, rgba(0, 0, 0, 0)), color-stop(58.06452%, rgba(0, 0, 0, 0)), color-stop(58.06452%, rgba(100, 100, 225, 0.25)), color-stop(70.96774%, rgba(100, 100, 225, 0.25)), color-stop(70.96774%, rgba(0, 0, 0, 0)), color-stop(72.58065%, rgba(0, 0, 0, 0)), color-stop(72.58065%, rgba(100, 100, 225, 0.25)), color-stop(85.48387%, rgba(100, 100, 225, 0.25)), color-stop(85.48387%, rgba(0, 0, 0, 0)), color-stop(87.09677%, rgba(0, 0, 0, 0)), color-stop(87.09677%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 12.90323%, rgba(0, 0, 0, 0) 12.90323%, rgba(0, 0, 0, 0) 14.51613%, rgba(100, 100, 225, 0.25) 14.51613%, rgba(100, 100, 225, 0.25) 27.41935%, rgba(0, 0, 0, 0) 27.41935%, rgba(0, 0, 0, 0) 29.03226%, rgba(100, 100, 225, 0.25) 29.03226%, rgba(100, 100, 225, 0.25) 41.93548%, rgba(0, 0, 0, 0) 41.93548%, rgba(0, 0, 0, 0) 43.54839%, rgba(100, 100, 225, 0.25) 43.54839%, rgba(100, 100, 225, 0.25) 56.45161%, rgba(0, 0, 0, 0) 56.45161%, rgba(0, 0, 0, 0) 58.06452%, rgba(100, 100, 225, 0.25) 58.06452%, rgba(100, 100, 225, 0.25) 70.96774%, rgba(0, 0, 0, 0) 70.96774%, rgba(0, 0, 0, 0) 72.58065%, rgba(100, 100, 225, 0.25) 72.58065%, rgba(100, 100, 225, 0.25) 85.48387%, rgba(0, 0, 0, 0) 85.48387%, rgba(0, 0, 0, 0) 87.09677%, rgba(100, 100, 225, 0.25) 87.09677%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-position: left top; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; }
+@media (min-width: 40em) { .container { background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(10%, rgba(100, 100, 225, 0.25)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(11.25%, rgba(0, 0, 0, 0)), color-stop(11.25%, rgba(100, 100, 225, 0.25)), color-stop(21.25%, rgba(100, 100, 225, 0.25)), color-stop(21.25%, rgba(0, 0, 0, 0)), color-stop(22.5%, rgba(0, 0, 0, 0)), color-stop(22.5%, rgba(100, 100, 225, 0.25)), color-stop(32.5%, rgba(100, 100, 225, 0.25)), color-stop(32.5%, rgba(0, 0, 0, 0)), color-stop(33.75%, rgba(0, 0, 0, 0)), color-stop(33.75%, rgba(100, 100, 225, 0.25)), color-stop(43.75%, rgba(100, 100, 225, 0.25)), color-stop(43.75%, rgba(0, 0, 0, 0)), color-stop(45%, rgba(0, 0, 0, 0)), color-stop(45%, rgba(100, 100, 225, 0.25)), color-stop(55%, rgba(100, 100, 225, 0.25)), color-stop(55%, rgba(0, 0, 0, 0)), color-stop(56.25%, rgba(0, 0, 0, 0)), color-stop(56.25%, rgba(100, 100, 225, 0.25)), color-stop(66.25%, rgba(100, 100, 225, 0.25)), color-stop(66.25%, rgba(0, 0, 0, 0)), color-stop(67.5%, rgba(0, 0, 0, 0)), color-stop(67.5%, rgba(100, 100, 225, 0.25)), color-stop(77.5%, rgba(100, 100, 225, 0.25)), color-stop(77.5%, rgba(0, 0, 0, 0)), color-stop(78.75%, rgba(0, 0, 0, 0)), color-stop(78.75%, rgba(100, 100, 225, 0.25)), color-stop(88.75%, rgba(100, 100, 225, 0.25)), color-stop(88.75%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 11.25%, rgba(100, 100, 225, 0.25) 11.25%, rgba(100, 100, 225, 0.25) 21.25%, rgba(0, 0, 0, 0) 21.25%, rgba(0, 0, 0, 0) 22.5%, rgba(100, 100, 225, 0.25) 22.5%, rgba(100, 100, 225, 0.25) 32.5%, rgba(0, 0, 0, 0) 32.5%, rgba(0, 0, 0, 0) 33.75%, rgba(100, 100, 225, 0.25) 33.75%, rgba(100, 100, 225, 0.25) 43.75%, rgba(0, 0, 0, 0) 43.75%, rgba(0, 0, 0, 0) 45%, rgba(100, 100, 225, 0.25) 45%, rgba(100, 100, 225, 0.25) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 56.25%, rgba(100, 100, 225, 0.25) 56.25%, rgba(100, 100, 225, 0.25) 66.25%, rgba(0, 0, 0, 0) 66.25%, rgba(0, 0, 0, 0) 67.5%, rgba(100, 100, 225, 0.25) 67.5%, rgba(100, 100, 225, 0.25) 77.5%, rgba(0, 0, 0, 0) 77.5%, rgba(0, 0, 0, 0) 78.75%, rgba(100, 100, 225, 0.25) 78.75%, rgba(100, 100, 225, 0.25) 88.75%, rgba(0, 0, 0, 0) 88.75%, rgba(0, 0, 0, 0) 90%, rgba(100, 100, 225, 0.25) 90%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-position: left top; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; } }
+@media (min-width: 53.5em) { .container { background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(7.47664%, rgba(100, 100, 225, 0.25)), color-stop(7.47664%, rgba(0, 0, 0, 0)), color-stop(8.41121%, rgba(0, 0, 0, 0)), color-stop(8.41121%, rgba(100, 100, 225, 0.25)), color-stop(15.88785%, rgba(100, 100, 225, 0.25)), color-stop(15.88785%, rgba(0, 0, 0, 0)), color-stop(16.82243%, rgba(0, 0, 0, 0)), color-stop(16.82243%, rgba(100, 100, 225, 0.25)), color-stop(24.29907%, rgba(100, 100, 225, 0.25)), color-stop(24.29907%, rgba(0, 0, 0, 0)), color-stop(25.23364%, rgba(0, 0, 0, 0)), color-stop(25.23364%, rgba(100, 100, 225, 0.25)), color-stop(32.71028%, rgba(100, 100, 225, 0.25)), color-stop(32.71028%, rgba(0, 0, 0, 0)), color-stop(33.64486%, rgba(0, 0, 0, 0)), color-stop(33.64486%, rgba(100, 100, 225, 0.25)), color-stop(41.1215%, rgba(100, 100, 225, 0.25)), color-stop(41.1215%, rgba(0, 0, 0, 0)), color-stop(42.05607%, rgba(0, 0, 0, 0)), color-stop(42.05607%, rgba(100, 100, 225, 0.25)), color-stop(49.53271%, rgba(100, 100, 225, 0.25)), color-stop(49.53271%, rgba(0, 0, 0, 0)), color-stop(50.46729%, rgba(0, 0, 0, 0)), color-stop(50.46729%, rgba(100, 100, 225, 0.25)), color-stop(57.94393%, rgba(100, 100, 225, 0.25)), color-stop(57.94393%, rgba(0, 0, 0, 0)), color-stop(58.8785%, rgba(0, 0, 0, 0)), color-stop(58.8785%, rgba(100, 100, 225, 0.25)), color-stop(66.35514%, rgba(100, 100, 225, 0.25)), color-stop(66.35514%, rgba(0, 0, 0, 0)), color-stop(67.28972%, rgba(0, 0, 0, 0)), color-stop(67.28972%, rgba(100, 100, 225, 0.25)), color-stop(74.76636%, rgba(100, 100, 225, 0.25)), color-stop(74.76636%, rgba(0, 0, 0, 0)), color-stop(75.70093%, rgba(0, 0, 0, 0)), color-stop(75.70093%, rgba(100, 100, 225, 0.25)), color-stop(83.17757%, rgba(100, 100, 225, 0.25)), color-stop(83.17757%, rgba(0, 0, 0, 0)), color-stop(84.11215%, rgba(0, 0, 0, 0)), color-stop(84.11215%, rgba(100, 100, 225, 0.25)), color-stop(91.58879%, rgba(100, 100, 225, 0.25)), color-stop(91.58879%, rgba(0, 0, 0, 0)), color-stop(92.52336%, rgba(0, 0, 0, 0)), color-stop(92.52336%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 7.47664%, rgba(0, 0, 0, 0) 7.47664%, rgba(0, 0, 0, 0) 8.41121%, rgba(100, 100, 225, 0.25) 8.41121%, rgba(100, 100, 225, 0.25) 15.88785%, rgba(0, 0, 0, 0) 15.88785%, rgba(0, 0, 0, 0) 16.82243%, rgba(100, 100, 225, 0.25) 16.82243%, rgba(100, 100, 225, 0.25) 24.29907%, rgba(0, 0, 0, 0) 24.29907%, rgba(0, 0, 0, 0) 25.23364%, rgba(100, 100, 225, 0.25) 25.23364%, rgba(100, 100, 225, 0.25) 32.71028%, rgba(0, 0, 0, 0) 32.71028%, rgba(0, 0, 0, 0) 33.64486%, rgba(100, 100, 225, 0.25) 33.64486%, rgba(100, 100, 225, 0.25) 41.1215%, rgba(0, 0, 0, 0) 41.1215%, rgba(0, 0, 0, 0) 42.05607%, rgba(100, 100, 225, 0.25) 42.05607%, rgba(100, 100, 225, 0.25) 49.53271%, rgba(0, 0, 0, 0) 49.53271%, rgba(0, 0, 0, 0) 50.46729%, rgba(100, 100, 225, 0.25) 50.46729%, rgba(100, 100, 225, 0.25) 57.94393%, rgba(0, 0, 0, 0) 57.94393%, rgba(0, 0, 0, 0) 58.8785%, rgba(100, 100, 225, 0.25) 58.8785%, rgba(100, 100, 225, 0.25) 66.35514%, rgba(0, 0, 0, 0) 66.35514%, rgba(0, 0, 0, 0) 67.28972%, rgba(100, 100, 225, 0.25) 67.28972%, rgba(100, 100, 225, 0.25) 74.76636%, rgba(0, 0, 0, 0) 74.76636%, rgba(0, 0, 0, 0) 75.70093%, rgba(100, 100, 225, 0.25) 75.70093%, rgba(100, 100, 225, 0.25) 83.17757%, rgba(0, 0, 0, 0) 83.17757%, rgba(0, 0, 0, 0) 84.11215%, rgba(100, 100, 225, 0.25) 84.11215%, rgba(100, 100, 225, 0.25) 91.58879%, rgba(0, 0, 0, 0) 91.58879%, rgba(0, 0, 0, 0) 92.52336%, rgba(100, 100, 225, 0.25) 92.52336%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%); background-position: left top; -webkit-background-origin: content; -moz-background-origin: content; -ms-background-origin: content-box; -o-background-origin: content-box; background-origin: content-box; -webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box; } }
