@@ -288,6 +288,16 @@ table {
   border-spacing: 0;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -314,10 +324,17 @@ table {
   margin-left: 0;
 }
 
-/*.nav-open .content {
-  @include pre($side);
-  overflow: hidden;
-}*/
+.nav-open .content {
+  margin-right: -83.33333%;
+}
+
+.content {
+  width: 100%;
+  float: left;
+  margin-right: 4.16667%;
+  display: inline;
+}
+
 .menu {
   width: 79.16667%;
   float: left;
@@ -326,21 +343,29 @@ table {
   margin-left: -100%;
 }
 
+.header, .footer {
+  width: 100%;
+}
+
 .menu-button {
   float: left;
 }
 
 @media (min-width: 41em) {
-  .nav-open .menu {
+  .menu {
+    width: 100%;
+    float: left;
+    margin-right: 2.5641%;
+    overflow: hidden;
+    float: none;
+    display: block;
     margin-left: 0;
   }
 
-  /*.nav-open .content {
-    @include pre($side);
-  }*/
-  .menu {
-    width: 35.89744%;
-    margin-left: -100%;
+  .menu li {
+    float: left;
+    padding: .4em;
+    list-style: none;
   }
 
   .main {
@@ -356,22 +381,20 @@ table {
     float: right;
     margin-right: 0;
   }
+
+  .menu-button {
+    display: none;
+  }
+
+  .header, .footer {
+    width: 100%;
+  }
 }
 @media (min-width: 61em) {
   .menu {
     width: 100%;
     float: left;
     margin-right: 1.69492%;
-    overflow: hidden;
-    float: none;
-    display: block;
-    margin-left: 0;
-  }
-
-  .menu li {
-    float: left;
-    padding: .4em;
-    list-style: none;
   }
 
   .main {
@@ -388,8 +411,8 @@ table {
     margin-right: 0;
   }
 
-  .menu-button {
-    display: none;
+  .header, .footer {
+    width: 100%;
   }
 }
 .container {
@@ -445,7 +468,7 @@ table {
   }
 }
 
-header, footer {
+.header, .footer {
   overflow: hidden;
   *zoom: 1;
   padding: 1em;
@@ -453,27 +476,38 @@ header, footer {
   text-align: center;
 }
 
-footer li {
+.footer ul {
+  margin-left: 0;
+}
+
+.footer li {
   list-style: none;
 }
 
 .content {
   overflow: hidden;
   *zoom: 1;
+  overflow: hidden;
+  width: 100%;
 }
 
-.menu, .main, .omega {
-  -webkit-transition: 0.5s all ease;
-  -moz-transition: 0.5s all ease;
-  -o-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  padding: 1em;
+.menu, .content, .main, .omega {
+  -webkit-transition: 0.5s all linear;
+  -moz-transition: 0.5s all linear;
+  -o-transition: 0.5s all linear;
+  transition: 0.5s all linear;
 }
 
 .menu {
   background: rgba(204, 255, 255, 0.75);
+  margin-right: 0;
 }
 
 .main {
   background: rgba(238, 238, 238, 0.75);
+  padding: .5em;
+}
+
+.omega {
+  padding: .5em;
 }

@@ -52,10 +52,11 @@ $side   : $total-columns - $anchor;
 }
 
 .nav-open .content {
-  //@include reset-columns;
-  @include span-columns($total-columns);
-  overflow: hidden;
   margin-right: - space($side);
+}
+
+.content {
+  @include span-columns($total-columns);
 }
 
 .menu {
@@ -63,10 +64,7 @@ $side   : $total-columns - $anchor;
   margin-left: -100%;
 }
 
-.main { }
-.omega { }
-
-header, footer { width: columns($total-columns); }
+.header, .footer { width: columns($total-columns); }
 
 .menu-button {
   float: left;
@@ -80,10 +78,6 @@ $main : 5;
 $side : $medium-columns - $main;
 
 @include at-breakpoint($medium-columns) {
-
-  .nav-open .menu {
-    margin-left: 0;
-  }
 
   .menu {
     @include span-columns($medium-columns);
@@ -112,7 +106,7 @@ $side : $medium-columns - $main;
     display: none;
   }
 
-  header, footer { width: columns($medium-columns); }
+  .header, .footer { width: columns($medium-columns); }
 
 }
 
@@ -137,7 +131,7 @@ $side : $large-columns - $main;
     @include omega;
   }
 
-  header, footer { width: columns($large-columns); }
+  .header, .footer { width: columns($large-columns); }
 
 }
 
@@ -150,30 +144,41 @@ $side : $large-columns - $main;
   @include at-breakpoint($large-columns) { @include susy-grid-background; }
 }
 
-header, footer {
+.header, .footer {
   @include clearfix;
   padding: 1em;
   background: rgba(#fcf,.75);
   text-align: center;
 }
 
-footer li {
+.footer ul {
+  margin-left: 0;
+}
+
+.footer li {
   list-style: none;
 }
 
 .content {
   @include clearfix;
+  overflow: hidden;
+  width: 100%;
 }
 
 .menu, .content, .main, .omega {
-  @include transition(.5s all ease);
-  padding: 1em;
+  @include transition(.5s all linear);
 }
 
 .menu {
   background: rgba(#cff,.75);
+  margin-right: 0;
 }
 
 .main {
   background: rgba(#eee,.75);
+  padding: .5em;
+}
+
+.omega {
+  padding: .5em;
 }
